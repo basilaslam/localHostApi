@@ -6,7 +6,10 @@ const mongoString = process.env.DATABASE_URL;
 const routes = require('./routes/routes');
 const app = express();
 const database = mongoose.connection;
+const port = process.env.PORT || 3000;
+
 app.use(express.json());
+
 
 
 app.use('/', routes)
@@ -22,6 +25,6 @@ database.once('connected', () => {
 })
 
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log(`Server Started at ${3000}`)
 })
