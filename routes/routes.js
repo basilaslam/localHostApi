@@ -8,7 +8,7 @@ router.post('/post', async (req, res) => {
         ip: req.body.ip
        
     })
-    console.log('ip');
+    console.log(req.body);
 
     try {
         const dataToSave = await data.save();
