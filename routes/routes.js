@@ -5,10 +5,10 @@ const router = express.Router()
 //Post Method
 router.post('/post', async (req, res) => {
     const data = new Model({
-        ip: req.body.fwd
+        ip: req.body.ip
        
     })
-    console.log(req.body);
+    console.log(req.body.ip);
 
     try {
         const dataToSave = await data.save();
